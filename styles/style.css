@@ -47,6 +47,7 @@ main{
     background-color: var(--grey);
     text-align: center;
     padding-bottom: 32px;
+    padding: 20px;
 }
 
 .title{
@@ -86,6 +87,7 @@ form{
     outline: 2px solid var(--blue);
     border: none;
     font-family: inherit;
+    padding: 2px 8px;
 }
 
 .input-container input:focus{
@@ -104,6 +106,7 @@ form{
     outline: 2px solid var(--blue);
     border: none;
     font-family: inherit;
+    padding: 2px 8px;
 }
 
 .input-container textarea{
@@ -112,6 +115,7 @@ form{
     outline: 2px solid var(--blue);
     border: none;
     font-family: inherit;
+    padding: 4px 8px;
 }
 
 .btn-container{
@@ -156,6 +160,11 @@ form{
     gap: 32px;
 }
 
+.card-container a{
+    text-decoration: none;
+    color: none;
+}
+
 .card{
     width: 330px;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25),
@@ -171,7 +180,7 @@ form{
 }
 
 .card h4{
-    color: var(--yellow);
+    color: var(--blue);
     width: 100%;
     text-align: start;
     margin-bottom: 8px;
@@ -182,15 +191,71 @@ form{
     text-align: start;
     font-size: 14px;
     margin-bottom: 12px;
+    color: var(--black);
 }
 
 .card .description{
     width: 100%;
     text-align: justify;
+    color: var(--black);
 }
 
 .card div{
     width: 100%;
     text-align: end;
     margin-top: 12px;
+}
+
+.modal{
+    width: 500px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: fixed;
+    left: 32%;
+    top: 3%;
+    z-index: 2;
+    background-color: var(--grey);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.modal .header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    background-color: var(--blue);
+    border-radius: 16px 16px 0 0;
+    color: var(--grey);
+    padding: 4px;
+    font-size: 20px;
+    padding-left: 16px;
+}
+
+.modal .modal-btn{
+    display: flex;
+    justify-content: end;
+    padding: 8px 16px;
+}
+
+.lead{
+    color: var(--blue);
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.data-container .info{
+    width: 100%;
+    text-align: start;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+.data-container .report{
+    width: 100%;
+    text-align: justify;
+}
+
+.data-container .btn-report-container{
+    width: 100%;
+    text-align: start;
+    margin-top: 24px;
 }
