@@ -16,10 +16,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include '../includes/head.php'; ?>
     <title>Home</title>
-    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <?php include '../includes/header.php' ?>
@@ -35,7 +33,7 @@
                         <p class="info"><?php echo "$report->author - $report->date - " . $categorys[$report->category - 1]; ?></p>
                         <p class="description"><?php echo $report->description; ?></p>
                         <div class="card-btn-container">
-                            <button type="submit" class="btn-red">Deletar</button>
+                            <a class="btn-red" onclick="deleteReport(<?php echo $report->id; ?>)">Deletar</a>
                             <a class="btn-blue" href="../cadastro/form.php">Editar</a>
                         </div>
                     </div>
@@ -43,5 +41,12 @@
             </div>
         </div>
     </main>
+    <script>
+        function deleteReport(id){
+            if(confirm('Deseja realmente excluir?')){
+                window.location.href = '../cadastro/delete.php?id=' + id
+            }
+        }
+    </script>
 </body>
 </html>
